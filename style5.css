@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(img5/bg.jpg) no-repeat;
+    background-size: cover;
+
+    font-family: "Titillium Web", sans-serif;
+    color: #cccccc;
+    font-size: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.wrapper {
+    max-width: 800px;
+    height: 80%;
+    width: 100%;
+
+    background-color: rgba(15, 15, 15, 0.3);
+    backdrop-filter: blur(5px);
+
+    padding: 30px 70px;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+}
+
+#res{
+    margin: 0px 0px 20px 0px;
+    font-size: 40px;
+    position: absolute;
+    top: 5%;
+}
+
+.interface{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+h2 {
+    margin-bottom: 14px;
+
+    font-size: 28px;
+}
+.u{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slot{
+    width: 395px;
+    height: 210px;
+    position: relative;
+    
+}
+
+.lines{
+    width: 314.6px;
+    height: auto;
+    position: absolute;
+    justify-content: space-between;
+    display: flex;
+
+    top: 45%;
+    left: 28.1%;
+}
+
+.line{
+    background: url('img5/reel.jpg');
+    background-position: 0 0;
+    background-repeat: repeat-y;
+
+    width: 100px;
+    height: 115px;
+    border-radius: 10px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+#try-again{
+    background-color: #8f9275;
+    display: none;
+}
+
+#try-again:hover{
+    background-color: #6c6e59;
+}
+
+button {
+    width: 80%;
+    height: auto;
+    padding: 15px 10px;
+    margin-top: 10px;
+
+    background-color: #85634e;
+
+    border: none;
+    border-radius: 14px;
+
+    font-family: "Inconsolata", monospace;
+    color: #cccccc;
+    font-size: 23px;
+    font-weight: 500;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #634939;
+    transform: scale(1.03);
+}
+
+
+@media (max-width: 840px) {
+    .wrapper{
+        width: 90%;
+        padding: 7%;
+    }
+
+    #try-again{
+        height: auto;
+    }
+
+    h2{
+        font-size: 24px;
+    }
+}
+
+.win {
+    animation: win 200ms steps(2, end) infinite;
+}
+
+@keyframes win {
+    0% { 
+        background: #25b50b; 
+        box-shadow: 0 0 80px #14b901;
+    }
+    100% { 
+        background: transparent;
+    }
+}
+.lose {
+    animation: lose 200ms steps(2, end) infinite;
+}
+@keyframes lose {
+    0% { 
+        background: rgb(192, 4, 4); 
+        box-shadow: 0 0 80px rgb(255, 1, 1);
+    }
+    100% { 
+        background: transparent; 
+    }
+}

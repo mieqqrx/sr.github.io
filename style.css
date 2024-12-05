@@ -1,0 +1,105 @@
+body {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Inconsolata", monospace;
+    color: #cccccc;
+    font-size: 21px;
+    background: url(img/bg.jpg) no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0 15px; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.line {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+.wrapper {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+    align-items: center;
+}
+
+.card {
+    transition: 0.3s ease;
+    margin: 20px;
+    max-width: 100%;
+    flex: 1 1 300px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    padding: 10px 15px;
+}
+
+@media (max-width: 992px) {
+    .card {
+        width: 30rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 18px; 
+    }
+
+    .line {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%; 
+    }
+}
+
+@media (max-width: 576px) {
+    .wrapper {
+        margin-top: 60px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card-text {
+        font-size: 16px;
+    }
+
+    .navbar {
+        font-size: 14px; 
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        font-size: 14px; 
+    }
+
+    .card-text {
+        font-size: 12px;
+    }
+
+    .navbar {
+        font-size: 12px;
+    }
+}
